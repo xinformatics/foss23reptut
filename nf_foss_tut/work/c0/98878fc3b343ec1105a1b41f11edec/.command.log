@@ -1,0 +1,76 @@
+Version Info: ### PLEASE UPGRADE SALMON ###
+### A newer version of salmon with bug fixes is available. ####
+###
+The newest version, available at https://github.com/COMBINE-lab/salmon/releases
+contains new features, improvements, and bug fixes; please upgrade at your
+earliest convenience.
+###
+Sign up for the salmon mailing list to hear about new versions, features and updates at:
+https://oceangenomics.com/subscribe
+###
+### salmon (mapping-based) v0.14.1
+### [ program ] => salmon 
+### [ command ] => quant 
+### [ threads ] => { 1 }
+### [ libType ] => { U }
+### [ index ] => { index }
+### [ mates1 ] => { gut_1.fq }
+### [ mates2 ] => { gut_2.fq }
+### [ output ] => { gut }
+Logs will be written to gut/logs
+[2023-03-02 13:15:43.847] [jointLog] [info] Fragment incompatibility prior below threshold.  Incompatible fragments will be ignored.
+[2023-03-02 13:15:43.847] [jointLog] [warning] 
+
+NOTE: It appears you are running salmon without the `--validateMappings` option.
+Mapping validation can generally improve both the sensitivity and specificity of mapping,
+with only a moderate increase in use of computational resources. 
+Mapping validation is planned to become a default option (i.e. turned on by default) in
+the next release of salmon.
+Unless there is a specific reason to do this (e.g. testing on clean simulated data),
+`--validateMappings` is generally recommended.
+
+[2023-03-02 13:15:43.847] [jointLog] [info] parsing read library format
+[2023-03-02 13:15:43.847] [jointLog] [info] There is 1 library.
+[2023-03-02 13:15:43.870] [stderrLog] [info] Loading Suffix Array 
+[2023-03-02 13:15:43.870] [stderrLog] [info] Loading Transcript Info 
+[2023-03-02 13:15:43.870] [stderrLog] [info] Loading Rank-Select Bit Array
+[2023-03-02 13:15:43.870] [stderrLog] [info] There were 1 set bits in the bit array
+[2023-03-02 13:15:43.870] [stderrLog] [info] Computing transcript lengths
+[2023-03-02 13:15:43.870] [stderrLog] [info] Waiting to finish loading hash
+[2023-03-02 13:15:43.878] [stderrLog] [info] Done loading index
+[2023-03-02 13:15:43.870] [jointLog] [info] Loading Quasi index
+[2023-03-02 13:15:43.870] [jointLog] [info] Loading 32-bit quasi index
+[2023-03-02 13:15:43.878] [jointLog] [info] done
+[2023-03-02 13:15:43.878] [jointLog] [info] Index contained 1 targets
+
+
+
+
+
+
+
+
+
+
+
+
+[2023-03-02 13:15:43.914] [jointLog] [info] Computed 1 rich equivalence classes for further processing
+[2023-03-02 13:15:43.914] [jointLog] [info] Counted 1,895 total reads in the equivalence classes 
+[2023-03-02 13:15:43.914] [jointLog] [info] Number of fragments discarded because they have only dovetail (discordant) mappings : 1,037
+[2023-03-02 13:15:43.914] [jointLog] [warning] Only 1895 fragments were mapped, but the number of burn-in fragments was set to 5000000.
+The effective lengths have been computed using the observed mappings.
+
+[2023-03-02 13:15:43.914] [jointLog] [info] Mapping rate = 64.5216%
+
+[2023-03-02 13:15:43.914] [jointLog] [info] finished quantifyLibrary()
+[2023-03-02 13:15:43.914] [jointLog] [info] Starting optimizer
+[2023-03-02 13:15:43.915] [jointLog] [info] Marked 0 weighted equivalence classes as degenerate
+[2023-03-02 13:15:43.915] [jointLog] [info] iteration = 0 | max rel diff. = 1.19986e-16
+[2023-03-02 13:15:43.915] [jointLog] [info] iteration = 100 | max rel diff. = 0
+[2023-03-02 13:15:43.915] [jointLog] [info] Finished optimizer
+[2023-03-02 13:15:43.915] [jointLog] [info] writing output 
+
+[2023-03-02 13:15:43.915] [jointLog] [warning] NOTE: Read Lib [[ gut_1.fq, gut_2.fq]] :
+
+Detected a *potential* strand bias > 1% in an unstranded protocol check the file: gut/lib_format_counts.json for details
+

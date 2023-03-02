@@ -1,0 +1,65 @@
+Mar-02 13:15:40.731 [main] DEBUG nextflow.cli.Launcher - $> nextflow run script2.nf -resume --reads 'data/ggal/*_{1,2}.fq'
+Mar-02 13:15:40.779 [main] INFO  nextflow.cli.CmdRun - N E X T F L O W  ~  version 22.10.6
+Mar-02 13:15:40.793 [main] DEBUG nextflow.plugin.PluginsFacade - Setting up plugin manager > mode=prod; embedded=false; plugins-dir=/home/user/.nextflow/plugins; core-plugins: nf-amazon@1.11.3,nf-azure@0.14.2,nf-codecommit@0.1.2,nf-console@1.0.4,nf-ga4gh@1.0.4,nf-google@1.4.5,nf-tower@1.5.6,nf-wave@0.5.3
+Mar-02 13:15:40.819 [main] INFO  org.pf4j.DefaultPluginStatusProvider - Enabled plugins: []
+Mar-02 13:15:40.819 [main] INFO  org.pf4j.DefaultPluginStatusProvider - Disabled plugins: []
+Mar-02 13:15:40.822 [main] INFO  org.pf4j.DefaultPluginManager - PF4J version 3.4.1 in 'deployment' mode
+Mar-02 13:15:40.829 [main] INFO  org.pf4j.AbstractPluginManager - No plugins
+Mar-02 13:15:40.875 [main] DEBUG nextflow.cli.CmdRun - Applied DSL=1 by probing script field
+Mar-02 13:15:40.889 [main] INFO  nextflow.cli.CmdRun - Launching `script2.nf` [irreverent_mandelbrot] DSL1 - revision: 03d8ffc2cb
+Mar-02 13:15:40.889 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins default=[]
+Mar-02 13:15:40.889 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins resolved requirement=[]
+Mar-02 13:15:40.917 [main] DEBUG nextflow.secret.LocalSecretsProvider - Secrets store: /home/user/.nextflow/secrets/store.json
+Mar-02 13:15:40.922 [main] DEBUG nextflow.secret.SecretsLoader - Discovered secrets providers: [nextflow.secret.LocalSecretsProvider@4647881c] - activable => nextflow.secret.LocalSecretsProvider@4647881c
+Mar-02 13:15:40.966 [main] DEBUG nextflow.Session - Session UUID: ccfac301-4415-4010-b436-1fe92a5eca1f
+Mar-02 13:15:40.966 [main] DEBUG nextflow.Session - Run name: irreverent_mandelbrot
+Mar-02 13:15:40.966 [main] DEBUG nextflow.Session - Executor pool size: 128
+Mar-02 13:15:40.973 [main] DEBUG nextflow.util.ThreadPoolBuilder - Creating thread pool 'FileTransfer' minSize=10; maxSize=384; workQueue=LinkedBlockingQueue[10000]; allowCoreThreadTimeout=false
+Mar-02 13:15:41.317 [main] DEBUG nextflow.cli.CmdRun - 
+  Version: 22.10.6 build 5843
+  Created: 23-01-2023 23:20 UTC (16:20 MDT)
+  System: Linux 5.14.0-162.12.1.el9_1.0.2.x86_64
+  Runtime: Groovy 3.0.13 on OpenJDK 64-Bit Server VM 11.0.13+7-b1751.21
+  Encoding: UTF-8 (UTF-8)
+  Process: 1778@a3675991b [10.38.80.18]
+  CPUs: 128 - Mem: 503.5 GB (406.3 GB) - Swap: 0 (0)
+Mar-02 13:15:41.344 [main] DEBUG nextflow.Session - Work-dir: /home/user/work/foss23reptut/nf_foss_tut/work [xfs]
+Mar-02 13:15:41.344 [main] DEBUG nextflow.Session - Script base path does not exist or is not a directory: /home/user/work/foss23reptut/nf_foss_tut/bin
+Mar-02 13:15:41.351 [main] DEBUG nextflow.executor.ExecutorFactory - Extension executors providers=[]
+Mar-02 13:15:41.359 [main] DEBUG nextflow.Session - Observer factory: DefaultObserverFactory
+Mar-02 13:15:41.374 [main] DEBUG nextflow.cache.CacheFactory - Using Nextflow cache factory: nextflow.cache.DefaultCacheFactory
+Mar-02 13:15:41.418 [main] DEBUG nextflow.util.CustomThreadPool - Creating default thread pool > poolSize: 129; maxThreads: 1000
+Mar-02 13:15:41.475 [main] DEBUG nextflow.Session - Session start
+Mar-02 13:15:42.635 [main] DEBUG nextflow.script.ScriptRunner - > Launching execution
+Mar-02 13:15:42.645 [main] INFO  nextflow.script.BaseScript - R N A S E Q - N F   P I P E L I N E    
+===================================
+transcriptome: /home/user/work/foss23reptut/nf_foss_tut/data/ggal/transcriptome.fa
+reads        : data/ggal/*_{1,2}.fq
+outdir       : results
+
+Mar-02 13:15:42.746 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Mar-02 13:15:42.746 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Mar-02 13:15:42.751 [main] DEBUG nextflow.executor.Executor - [warm up] executor > local
+Mar-02 13:15:42.756 [main] DEBUG n.processor.LocalPollingMonitor - Creating local task monitor for executor 'local' > cpus=128; memory=503.5 GB; capacity=128; pollInterval=100ms; dumpInterval=5m
+Mar-02 13:15:43.039 [PathVisitor-1] DEBUG nextflow.file.PathVisitor - files for syntax: glob; folder: data/ggal/; pattern: *_{1,2}.fq; options: [:]
+Mar-02 13:15:43.216 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Mar-02 13:15:43.217 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Mar-02 13:15:43.223 [main] DEBUG nextflow.Session - Workflow process names [dsl1]: quantification, index
+Mar-02 13:15:43.224 [main] DEBUG nextflow.script.ScriptRunner - > Awaiting termination 
+Mar-02 13:15:43.224 [main] DEBUG nextflow.Session - Session await
+Mar-02 13:15:43.362 [Actor Thread 3] INFO  nextflow.processor.TaskProcessor - [60/ef9e2b] Cached process > index
+Mar-02 13:15:43.539 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Mar-02 13:15:43.541 [Task submitter] INFO  nextflow.Session - [1e/0fe7c0] Submitted process > quantification (2)
+Mar-02 13:15:43.547 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Mar-02 13:15:43.547 [Task submitter] INFO  nextflow.Session - [c0/98878f] Submitted process > quantification (1)
+Mar-02 13:15:43.628 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Mar-02 13:15:43.628 [Task submitter] INFO  nextflow.Session - [86/84a07c] Submitted process > quantification (3)
+Mar-02 13:15:43.953 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 3; name: quantification (2); status: COMPLETED; exit: 0; error: -; workDir: /home/user/work/foss23reptut/nf_foss_tut/work/1e/0fe7c07f206b197c2835857a649907]
+Mar-02 13:15:43.969 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 2; name: quantification (1); status: COMPLETED; exit: 0; error: -; workDir: /home/user/work/foss23reptut/nf_foss_tut/work/c0/98878fc3b343ec1105a1b41f11edec]
+Mar-02 13:15:43.973 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 4; name: quantification (3); status: COMPLETED; exit: 0; error: -; workDir: /home/user/work/foss23reptut/nf_foss_tut/work/86/84a07c9eb56a41396ceabb75f6b067]
+Mar-02 13:15:43.974 [main] DEBUG nextflow.Session - Session await > all processes finished
+Mar-02 13:15:44.069 [main] DEBUG nextflow.Session - Session await > all barriers passed
+Mar-02 13:15:44.076 [main] DEBUG nextflow.trace.WorkflowStatsObserver - Workflow completed > WorkflowStats[succeededCount=3; failedCount=0; ignoredCount=0; cachedCount=1; pendingCount=0; submittedCount=0; runningCount=0; retriesCount=0; abortedCount=0; succeedDuration=820ms; failedDuration=0ms; cachedDuration=581ms;loadCpus=0; loadMemory=0; peakRunning=3; peakCpus=3; peakMemory=0; ]
+Mar-02 13:15:44.241 [main] DEBUG nextflow.cache.CacheDB - Closing CacheDB done
+Mar-02 13:15:44.248 [main] DEBUG nextflow.util.ThreadPoolManager - Thread pool 'FileTransfer' shutdown completed (hard=false)
+Mar-02 13:15:44.249 [main] DEBUG nextflow.script.ScriptRunner - > Execution complete -- Goodbye
